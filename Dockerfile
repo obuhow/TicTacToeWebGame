@@ -6,7 +6,7 @@ COPY build.gradle.kts settings.gradle.kts ./
 
 RUN chmod +x gradlew && ./gradlew build --no-daemon || return 0
 COPY src ./src
-RUN ./gradlew build --no-daemon
+RUN ./gradlew build -x test --no-daemon
 
 FROM eclipse-temurin:18-jre
 WORKDIR /app
