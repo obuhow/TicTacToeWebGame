@@ -2,7 +2,7 @@ spring:
   application:
     name: tictactoe
   profiles: 
-    active: prod
+    active: ${SPRING_PROFILES_ACTIVE}
 logging:
   level:
     root: "warn"
