@@ -1,9 +1,12 @@
-FROM gradle:9.4-jdk18 AS build
+FROM eclipse-temurin:18-jdk AS build
 WORKDIR /app
+COPY gradlew .
+COPY gradle gradle
 COPY build.gradle settings.gradle ./
-RUN gradle build --no-daemon || return 0
+
+RUN chmod +x gradlew && ./gradlew build --no-daemon || return 0
 COPY src ./src
-RUN gradle build --no-daemon
+RUN ./gradlew build --no-daemon
 
 FROM eclipse-temurin:18-jre
 WORKDIR /app
