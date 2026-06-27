@@ -2,7 +2,7 @@ FROM eclipse-temurin:18-jdk AS build
 WORKDIR /app
 COPY gradlew .
 COPY gradle gradle
-COPY build.gradle settings.gradle ./
+COPY build.gradle.kts settings.gradle.kts ./
 
 RUN chmod +x gradlew && ./gradlew build --no-daemon || return 0
 COPY src ./src
