@@ -26,7 +26,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import java.util.UUID;
 import lombok.AllArgsConstructor;
 
-@Tag(name = "Single game controller", description = "Single game API")
+@Tag(name = "Single game controller")
 @RestController
 @RequestMapping("/api/v1/game")
 @AllArgsConstructor(onConstructor_ = {@Autowired})
@@ -49,7 +49,7 @@ public class SingleGameController {
         repository.save(updateGame);
         return ResponseEntity.ok(mapper.toResponse(updateGame));
     }
-
+    
     @PostMapping
     public ResponseEntity<GameResponse> createGame(@RequestParam(defaultValue = "3") int size) {
         UUID gameId = UUID.randomUUID();
