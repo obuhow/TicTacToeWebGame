@@ -22,8 +22,10 @@ import com.faraldma.tictactoe.web.model.GameResponse;
 import com.faraldma.tictactoe.web.model.GameSummaryResponse;
 import com.faraldma.tictactoe.web.model.UserInfoResponse;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 
+@Tag(name = "Game Info controller")
 @RestController
 @RequestMapping("api/v1/info")
 @AllArgsConstructor

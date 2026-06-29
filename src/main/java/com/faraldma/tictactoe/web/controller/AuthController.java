@@ -13,8 +13,11 @@ import org.springframework.web.bind.annotation.RestController;
 import com.faraldma.tictactoe.security.AuthService;
 import com.faraldma.tictactoe.web.model.SignUpRequest;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 
+
+@Tag(name = "Authorization controller")
 @RestController
 @RequestMapping("/auth")
 @RequiredArgsConstructor

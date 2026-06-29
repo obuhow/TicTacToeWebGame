@@ -20,8 +20,10 @@ import com.faraldma.tictactoe.web.mapper.GameWebMapper;
 import com.faraldma.tictactoe.web.model.GameResponse;
 import com.faraldma.tictactoe.web.model.MoveRequset;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 
+@Tag(name = "Multiplayer game controller")
 @RestController
 @RequestMapping("api/v1/multiplayer")
 @AllArgsConstructor(onConstructor_ = {@Autowired})
