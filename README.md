@@ -57,6 +57,8 @@
 
 ## Архитектура проекта
 
+### Backend
+
 ```
 src/main/java/com/faraldma/tictactoe/
 ├── datasource/                 # Работа с БД 

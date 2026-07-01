@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: tictactoe
+  profiles: 
+    active: ${SPRING_PROFILES_ACTIVE:dev}
+logging:
+  level:
+    root: "warn"
+    org.springframework.web: "debug"
+    org.springframework.beans.factory: "debug"
+    org.springframework.context: "debug"
+    com.faraldma.tictactoe: "debug"
+  file:
+    name: ./logs/game.log
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %level - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} - %level - %msg%n"
